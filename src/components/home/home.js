@@ -16,7 +16,7 @@ const Home = () => (
         <Card>
           <div>
             <p><b>Trajetória</b></p>
-            <p>Somos uma instituição de ensino superiorbrasileira, sediada em São Paulo, com diversos cursos de técnico, graduação, pós-graduação, mestrado e doutorado. Buscamos através de um método de ensino focado na execução prática das atividades ajudar nossos alunos a evoluírem cada vez mais.</p>
+            <p>Somos uma instituição de ensino superior brasileira, sediada em São Paulo, com diversos cursos de técnico, graduação, pós-graduação, mestrado e doutorado. Buscamos através de um método de ensino focado na execução prática das atividades ajudar nossos alunos a evoluírem cada vez mais.</p>
             <br/>
             <p><b>Missão</b></p>
             <p>Participação no processo de construção e difusão do conhecimento e da cultura, de forma criativa e inovadora, tornando-os acessíveis à sociedade e contribuindo para o desenvolvimento do ser humano em todas as suas potencialidades, promovendo, assim, mudanças regionais e interlocução nacional e internacional, por meio do ensino, da pesquisa e da extensão.</p>

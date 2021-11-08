@@ -2,63 +2,44 @@
 import React from "react";
 // Importando os components necessários da lib react-materialize
 import { Row, Col, Card, Input, Button } from 'react-materialize';
-// Importando o component Experience
-import Experience from '../experience/experience'
 
-import img1 from '../../images/img1.jpg';
+import { NavLink} from 'react-router-dom'
 
-import img2 from '../../images/img2.jpg';
+import Curso_card from "./curso_card";
 
-import img3 from '../../images/img3.jpg';
 
-import img4 from '../../images/img4.jpg';
-
-import img5 from '../../images/img5.jpg';
-
-import img6 from '../../images/img6.jpg';
-
-const Contact = () => (
-  <Row>
-    <Col m={12} s={12}>
-        <h5>Cursos</h5>
-
-        <Experience title="Biologia"
-                    description=""
-                    avatar={img1}                    
-        />
-        <Experience title="Geografia"
-                    description=""
-                    avatar={img2}                    
-        />
-        <Experience title="Física"
-                    description=""
-                    avatar={img3}                    
-        />
-        <Experience title="História"
-                    description=""
-                    avatar={img4}                    
-        />
-        <Experience title="Matemática"
-                    description=""
-                    avatar={img5}                    
-        />
-        <Experience title="Química"
-                    description=""
-                    avatar={img6}                    
-        />
-
-        <h5>Envie-nos um comentário ou sugestão</h5>
-        <Card>
-          <Row>
+const Contact = (props) => {
+  return (
+    <div>
+      <Row>
+        <div class="row">
+          <div class="rowc">
+            <h5>Cursos</h5>
+            <NavLink to="/formulario"><a class="grey waves-effect waves-light btn">Adicionar</a></NavLink>
+          </div>
+            {props.coursesData.map(course => (
+              <Curso_card 
+                titulo={course.nome}
+                descricao={course.descricao} />
+            ))};
+          </div>
+      </Row>
+      <Row>
+        <Col s={12}>
+          <h5>Envie-nos um comentário ou sugestão</h5>
+          <Card>
+            <Row>
               <Input placeholder="Ex@Email.com" type="email" label="Email" s={12} />
               <Input placeholder="Digite aqui..." label="Message" s={12} />
-            <Col s={12} m={12}>
-              <Button waves='light' className="right grey darken-2">Concluir</Button>
-            </Col>
-          </Row>
-        </Card>
-    </Col>
-  </Row>
-);
+              <Col s={12} m={12}>
+                <Button waves='light' className="right grey darken-2">Concluir</Button>
+              </Col>
+            </Row>
+          </Card>
+        </Col>
+      </Row>
+    </div>
+  )
+};
 
 export default Contact;
