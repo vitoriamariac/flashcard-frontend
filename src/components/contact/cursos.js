@@ -19,9 +19,9 @@ const Contact = (props) => {
           </div>
             {props.coursesData.map(course => (
               <Curso_card 
-                titulo={course.nome}
-                descricao={course.descricao} />
-            ))};
+                course={course} 
+              />
+            ))}
           </div>
       </Row>
       <Row>
